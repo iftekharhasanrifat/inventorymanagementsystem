@@ -12,7 +12,7 @@ const ShowAllCategories = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("http://localhost:5555/categories")
+      .get("https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/categories")
       .then((res) => {
         setCategories(res.data.data);
         setLoading(false);

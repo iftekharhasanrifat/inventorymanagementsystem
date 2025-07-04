@@ -16,7 +16,7 @@ const EditCategories = () => {
 
     useEffect(() => {
     axios
-      .get(`http://localhost:5555/categories/${id}`) // Fetching the item details by ID
+      .get(`https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/categories/${id}`) // Fetching the item details by ID
       .then((res) => {
         const category = res.data;
         setName(category.Name);
@@ -46,7 +46,7 @@ const EditCategories = () => {
     // console.log(data);
     setLoading(true);
     axios
-      .put(`http://localhost:5555/categories/${id}`, data)
+      .put(`https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/categories/${id}`, data)
       .then(() => {
         setLoading(false);
         navigate('/categories/show');

@@ -21,7 +21,7 @@ const CreateItems = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5555/companies')
+      .get('https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/companies')
       .then((res) => {
         setCompanies(res.data.data);
       })
@@ -30,7 +30,7 @@ const CreateItems = () => {
       });
 
     axios
-      .get('http://localhost:5555/categories')
+      .get('https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/categories')
       .then((res) => {
         setCategories(res.data.data);
       })
@@ -74,7 +74,7 @@ const CreateItems = () => {
     // console.log(data);
     setLoading(true);
     axios
-      .post('http://localhost:5555/items', data)
+      .post('https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/items', data)
       .then(() => {
         setLoading(false);
         navigate('/');

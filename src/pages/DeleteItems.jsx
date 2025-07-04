@@ -13,7 +13,7 @@ const DeleteItems = () => {
   const handleDeleteItem = () => {
     setLoading(true);
     axios
-      .delete(`http://localhost:5555/items/${id}`)
+      .delete(`https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/items/${id}`)
       .then(() => {
         setLoading(false);
         navigate('/');

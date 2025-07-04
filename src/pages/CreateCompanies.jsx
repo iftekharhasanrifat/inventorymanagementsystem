@@ -33,7 +33,7 @@ const CreateCompanies = () => {
     // console.log(data);
     setLoading(true);
     axios
-      .post('http://localhost:5555/companies', data)
+      .post('https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/companies', data)
       .then(() => {
         setLoading(false);
         navigate('/companies/show');

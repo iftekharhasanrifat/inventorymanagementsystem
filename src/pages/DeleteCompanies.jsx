@@ -13,7 +13,7 @@ const DeleteCompanies = () => {
   const handleDeleteCompany = () => {
     setLoading(true);
     axios
-      .delete(`http://localhost:5555/companies/${id}`)
+      .delete(`https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/companies/${id}`)
       .then(() => {
         setLoading(false);
         navigate('/companies/show');

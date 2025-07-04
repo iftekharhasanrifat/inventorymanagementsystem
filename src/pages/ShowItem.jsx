@@ -12,7 +12,7 @@ const ShowItem = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://localhost:5555/items/${id}`)
+      .get(`https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/items/${id}`)
       .then((res) => {
         setItem(res.data);
         setLoading(false);

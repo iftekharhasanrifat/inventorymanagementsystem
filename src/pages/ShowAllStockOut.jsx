@@ -17,7 +17,7 @@ const ShowAllStockOut = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("http://localhost:5555/stockout")
+      .get("https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/stockout")
       .then((res) => {
         setStockOuts(res.data.data);
         setFilteredItems(res.data.data); // Initialize filtered data

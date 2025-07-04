@@ -17,7 +17,7 @@ const ShowAllStockIn = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("http://localhost:5555/stockin")
+      .get("https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/stockin")
       .then((res) => {
         setStockInLogs(res.data.data);
         setFilteredItems(res.data.data); // Initialize filtered data

@@ -12,7 +12,7 @@ const ShowAllCompanies = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("http://localhost:5555/companies")
+      .get("https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/companies")
       .then((res) => {
         setCompanies(res.data.data);
         setLoading(false);

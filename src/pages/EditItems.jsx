@@ -22,7 +22,7 @@ const EditItems = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5555/companies')
+      .get('https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/companies')
       .then((res) => {
         setCompanies(res.data.data);
       })
@@ -31,7 +31,7 @@ const EditItems = () => {
       });
 
     axios
-      .get('http://localhost:5555/categories')
+      .get('https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/categories')
       .then((res) => {
         setCategories(res.data.data);
       })
@@ -39,7 +39,7 @@ const EditItems = () => {
         console.error(error.message);
       });
     axios
-      .get(`http://localhost:5555/items/${id}`) // Fetching the item details by ID
+      .get(`https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/items/${id}`) // Fetching the item details by ID
       .then((res) => {
         const item = res.data;
         setName(item.Name);
@@ -87,7 +87,7 @@ const EditItems = () => {
     // console.log(data);
     setLoading(true);
     axios
-      .put(`http://localhost:5555/items/${id}`, data)
+      .put(`https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/items/${id}`, data)
       .then(() => {
         setLoading(false);
         navigate('/');

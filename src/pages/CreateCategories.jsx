@@ -33,7 +33,7 @@ const CreateCategories = () => {
     // console.log(data);
     setLoading(true);
     axios
-      .post('http://localhost:5555/categories', data)
+      .post('https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/categories', data)
       .then(() => {
         setLoading(false);
         navigate('/categories/show');

@@ -16,7 +16,7 @@ const ShowAllItems = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("http://localhost:5555/items")
+      .get("https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/items")
       .then((res) => {
         setItems(res.data.data);
         setLoading(false);

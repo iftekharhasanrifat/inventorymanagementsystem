@@ -12,7 +12,7 @@ const ShowStockOut = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://localhost:5555/stockout/${id}`)
+      .get(`https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/stockout/${id}`)
       .then((res) => {
         setStockoutItem(res.data);
         setLoading(false);

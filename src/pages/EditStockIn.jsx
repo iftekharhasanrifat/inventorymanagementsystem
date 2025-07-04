@@ -23,8 +23,8 @@ const EditStockIn = () => {
     const fetchData = async () => {
       try {
         const [itemsRes, stockInRes] = await Promise.all([
-          axios.get('http://localhost:5555/items'),
-          axios.get(`http://localhost:5555/stockin/${id}`),
+          axios.get('https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/items'),
+          axios.get(`https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/stockin/${id}`),
         ]);
 
         const itemList = itemsRes.data.data;
@@ -89,7 +89,7 @@ const EditStockIn = () => {
 
     setLoading(true);
     axios
-      .put(`http://localhost:5555/stockin/${id}`, data)
+      .put(`https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/stockin/${id}`, data)
       .then(() => {
         setLoading(false);
         navigate('/stockIn/show');

@@ -16,7 +16,7 @@ const EditCompanies = () => {
 
     useEffect(() => {
     axios
-      .get(`http://localhost:5555/companies/${id}`) // Fetching the item details by ID
+      .get(`https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/companies/${id}`) // Fetching the item details by ID
       .then((res) => {
         const company = res.data;
         setName(company.Name);
@@ -46,7 +46,7 @@ const EditCompanies = () => {
     // console.log(data);
     setLoading(true);
     axios
-      .put(`http://localhost:5555/companies/${id}`, data)
+      .put(`https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/companies/${id}`, data)
       .then(() => {
         setLoading(false);
         navigate('/companies/show');

@@ -27,7 +27,7 @@ const ShowProfit = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5555/items')
+      .get('https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/items')
       .then((res) => {
         setItems(res.data.data);
       })
@@ -172,8 +172,8 @@ const ShowProfit = () => {
     const month = sdate.split('-')[1];
     const year = sdate.split('-')[0];
     const url = item === '--Select Item--' || item === ''
-      ? `http://localhost:5555/stockout/totalProfit/${sdate}/${tdate}`
-      : `http://localhost:5555/stockout/totalProfit/${item}/${sdate}/${tdate}`;
+      ? `https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/stockout/totalProfit/${sdate}/${tdate}`
+      : `https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/stockout/totalProfit/${item}/${sdate}/${tdate}`;
 
       console.log(url)
     axios

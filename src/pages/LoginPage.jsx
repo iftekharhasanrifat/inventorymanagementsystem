@@ -35,7 +35,7 @@ const  LoginPage=()=> {
         setErrorMsg('Please fill in both fields.');
         return;
       }
-    const url = `http://localhost:5555/auth/login`;
+    const url = `https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/auth/login`;
     fetch(url, {
         method: 'POST',
         headers: {

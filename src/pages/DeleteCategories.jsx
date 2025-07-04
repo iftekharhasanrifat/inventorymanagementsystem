@@ -13,7 +13,7 @@ const DeleteCategories = () => {
   const handleDeleteCategory = () => {
     setLoading(true);
     axios
-      .delete(`http://localhost:5555/categories/${id}`)
+      .delete(`https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/categories/${id}`)
       .then(() => {
         setLoading(false);
         navigate('/categories/show');

@@ -26,7 +26,7 @@
 
 //   useEffect(() => {
 //     axios
-//       .get('http://localhost:5555/items')
+//       .get('https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/items')
 //       .then((res) => {
 //         setItems(res.data.data);
 //       })
@@ -76,7 +76,7 @@
 // //     // console.log(data);
 // //     setLoading(true);
 //     axios
-//       .post('http://localhost:5555/stockin', data)
+//       .post('https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/stockin', data)
 //       .then(() => {
 //         setLoading(false);
 //         navigate('/stockin-log');
@@ -297,7 +297,7 @@ const CreateStockIn = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5555/items')
+      .get('https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/items')
       .then((res) => setItems(res.data.data))
       .catch((error) => console.error(error.message));
   }, []);
@@ -344,7 +344,7 @@ const CreateStockIn = () => {
     setLoading(true);
     if (category === 'fittings') {
       axios
-      .post('http://localhost:5555/stockin/transform', fittingsData)
+      .post('https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/stockin/transform', fittingsData)
       .then(() => {
         setLoading(false);
         navigate('/stockIn/show');
@@ -357,7 +357,7 @@ const CreateStockIn = () => {
     }
     else {
       axios
-      .post('http://localhost:5555/stockin', data)
+      .post('https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/stockin', data)
       .then(() => {
         setLoading(false);
         navigate('/stockIn/show');
