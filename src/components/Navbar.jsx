@@ -344,7 +344,7 @@ const Navbar = () => {
               Logout
             </button>
           ) : (
-            <Link to="/signin" className="block w-full mt-2 bg-violet-500 hover:bg-violet-600 text-center py-2 rounded-md transition">
+            <Link to="/signin" className="block w-full mt-2  bg-emerald-500 hover:bg-emerald-600 text-center py-2 rounded-md transition">
               Login
             </Link>
           )}
