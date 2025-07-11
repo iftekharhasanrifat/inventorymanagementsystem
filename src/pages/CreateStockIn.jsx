@@ -331,7 +331,7 @@ const CreateStockIn = () => {
       Date: date,
     };
 
-    const fittingsData = {
+    const haruData = {
       Name: name,
       Company: company,
       Category: category,
@@ -342,9 +342,9 @@ const CreateStockIn = () => {
     };
 
     setLoading(true);
-    if (category === 'fittings') {
+    if (category === 'haru') {
       axios
-      .post('https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/stockin/transform', fittingsData)
+      .post('https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/stockin/transform', haruData)
       .then(() => {
         setLoading(false);
         navigate('/stockIn/show');
@@ -458,7 +458,7 @@ const CreateStockIn = () => {
         </div>
 
         {/* Price Per Unit */}
-        {category !== 'fittings' && (
+        {category !== 'haru' && (
           <div className='my-2'>
             <label className='text-lg text-gray-700'>Price Per Unit</label>
             <input
