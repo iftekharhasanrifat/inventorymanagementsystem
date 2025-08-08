@@ -41,7 +41,7 @@ const CreateClient = () => {
     // console.log(data);
     setLoading(true);
     axios
-      .post('https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/clients', data)
+      .post('https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/clients/create', data)
       .then(() => {
         setLoading(false);
         navigate('/clients/show');
