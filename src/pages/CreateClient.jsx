@@ -41,10 +41,10 @@ const CreateClient = () => {
     // console.log(data);
     setLoading(true);
     axios
-      .post('https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/categories', data)
+      .post('https://inventory-management-ba-git-4e9e06-iftekharhasanrifats-projects.vercel.app/clients', data)
       .then(() => {
         setLoading(false);
-        navigate('/categories/show');
+        navigate('/clients/show');
       })
       .catch((error) => {
         setLoading(false);
@@ -85,8 +85,8 @@ const CreateClient = () => {
             onChange={(e) => setPhone(e.target.value)}
             className='border-2 border-gray-300 p-3 w-full rounded-lg'
           />
-          {errors.name && (
-            <p className='text-red-500 text-sm mt-1'>{errors.name}</p>
+          {errors.phone && (
+            <p className='text-red-500 text-sm mt-1'>{errors.phone}</p>
         )}
         </div>
 
