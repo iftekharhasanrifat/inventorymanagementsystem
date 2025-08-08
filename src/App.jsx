@@ -37,6 +37,7 @@ import ClientAdvance from './pages/ClientAdvance.jsx'
 import ClientDetails from './pages/ClientDetails.jsx'
 import EditClientLedger from './pages/EditClientLedger.jsx'
 import DeleteClientLedger from './pages/DeleteClientLedger.jsx'
+import CreateClient from './pages/CreateClient.jsx'
 import Footer from './components/Footer.jsx'
 
 export const UserContext = createContext();
@@ -86,6 +87,7 @@ const App = () => {
         <Route path='client/details/:id' element={<PrivateRoute><ClientDetails /></PrivateRoute>} />
         <Route path='client/edit-ledger/:id' element={<PrivateRoute><EditClientLedger /></PrivateRoute>} />
         <Route path='client/delete-ledger/:id' element={<PrivateRoute><DeleteClientLedger /></PrivateRoute>} />
+        <Route path='client/create' element={<PrivateRoute><CreateClient /></PrivateRoute>} />
         {/* Add more routes as needed */}
         </Routes>
       </div>
