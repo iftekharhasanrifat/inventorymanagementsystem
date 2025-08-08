@@ -194,9 +194,11 @@ const Navbar = () => {
   const [isCreateOpen, setIsCreateOpen] = useState(false);
   const [isShowOpen, setIsShowOpen] = useState(false);
   const [isReportOpen, setIsReportOpen] = useState(false);
+  const [isClientOpen, setIsClientOpen] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [mobileCreateOpen, setMobileCreateOpen] = useState(false);
   const [mobileShowOpen, setMobileShowOpen] = useState(false);
+  const [mobileClientOpen, setMobileClientOpen] = useState(false);
   const [mobileReportOpen, setMobileReportOpen] = useState(false);
 
   const [loggedInUser] = useContext(UserContext);
@@ -255,6 +257,16 @@ const Navbar = () => {
                 <li><Link to="/companies/show" className="block px-4 py-2 hover:bg-zinc-700">Company List</Link></li>
                 <li><Link to="/stockIn/show" className="block px-4 py-2 hover:bg-zinc-700">Stock In Log</Link></li>
                 <li><Link to="/stockout/show" className="block px-4 py-2 hover:bg-zinc-700">Stock Out Record</Link></li>
+              </ul>
+            )}
+          </li>
+          <li className="relative">
+            <button onClick={() => setIsClientOpen(!isClientOpen)} className="hover:text-emerald-400 transition">
+              Clients ▾
+            </button>
+            {isClientOpen && (
+              <ul className="absolute bg-zinc-800 mt-2 rounded shadow-md z-10 min-w-[180px]">
+                <li><Link to="/clients/show" className="block px-4 py-2 hover:bg-zinc-700">Client List</Link></li>
               </ul>
             )}
           </li>
@@ -325,7 +337,15 @@ const Navbar = () => {
               </div>
             )}
           </div>
-
+          <div>
+            <button onClick={() => setMobileClientOpen(!mobileClientOpen)} className="w-full text-left py-2">Clients ▾</button>
+            {mobileClientOpen && (
+              <div className="ml-4 space-y-1">
+                <Link to="/clients/show" className="block py-1 hover:text-emerald-400">Client List</Link>
+                
+              </div>
+            )}
+          </div>
           <div>
             <button onClick={() => setMobileReportOpen(!mobileReportOpen)} className="w-full text-left py-2">Show Report ▾</button>
             {mobileReportOpen && (

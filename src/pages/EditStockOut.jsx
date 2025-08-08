@@ -73,7 +73,7 @@ const EditStockOut = () => {
     if (!itemId) newErrors.item = 'Please select a valid item.';
     if (!quantity || Number(quantity) <= 0) newErrors.quantity = 'Enter a valid quantity.';
     if (!pricePerUnit || Number(pricePerUnit) <= 0) newErrors.pricePerUnit = 'Enter a valid price.';
-    if (!labourCostPerUnit || Number(labourCostPerUnit) < 0) newErrors.labourCostPerUnit = 'Enter valid labour cost.';
+    if (Number(labourCostPerUnit) < 0) newErrors.labourCostPerUnit = 'Enter valid labour cost.';
     if (!clientName) newErrors.clientName = 'Please enter client name.';
     if (!date) newErrors.date = 'Please select a date.';
     setErrors(newErrors);
@@ -84,6 +84,9 @@ const EditStockOut = () => {
     if (!validate()) return;
 
     const data = {
+      Name: name,
+      Company: company,
+      Category: category,
       Quantity: Number(quantity),
       SellingPricePerUnit: Number(pricePerUnit),
       LabourCostPerUnit: Number(labourCostPerUnit),

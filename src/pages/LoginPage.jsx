@@ -55,7 +55,7 @@ const  LoginPage=()=> {
                 setErrorMessage(data)
             }
             navigate(from);
-            console.log(data)
+            // console.log(data)
         })
 
     

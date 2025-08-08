@@ -30,7 +30,7 @@ const DeleteStockIn = () => {
     <div className="p-6">
       <BackButton />
       <h1 className="text-3xl my-6 text-center font-semibold text-gray-700">
-        Delete Item
+        Delete Stock In Record
       </h1>
 
       {loading && (

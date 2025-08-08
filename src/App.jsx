@@ -29,6 +29,14 @@ import ShowProfit from './pages/ShowProfit.jsx'
 import ShowStockInLogReport from './pages/ShowStockInLogReport.jsx'
 import PrivateRoute from './components/PrivateRoute.jsx'
 import LoginPage from './pages/LoginPage.jsx'
+import ShowAllClients from './pages/ShowAllClients.jsx'
+import EditClients from './pages/EditClients.jsx'
+import DeleteClients from './pages/DeleteClients.jsx'
+import ClientPayment from './pages/ClientPayment.jsx'
+import ClientAdvance from './pages/ClientAdvance.jsx'
+import ClientDetails from './pages/ClientDetails.jsx'
+import EditClientLedger from './pages/EditClientLedger.jsx'
+import DeleteClientLedger from './pages/DeleteClientLedger.jsx'
 import Footer from './components/Footer.jsx'
 
 export const UserContext = createContext();
@@ -70,7 +78,14 @@ const App = () => {
         <Route path='stockout/delete/:id' element={<PrivateRoute><DeleteStockOut /></PrivateRoute>} />
         <Route path='profit/show' element={<PrivateRoute><ShowProfit /></PrivateRoute>} />
         <Route path='stockin-log' element={<PrivateRoute><ShowStockInLogReport /></PrivateRoute>} />
-
+        <Route path='clients/show' element={<PrivateRoute><ShowAllClients /></PrivateRoute>} />
+        <Route path='client/edit/:id' element={<PrivateRoute><EditClients /></PrivateRoute>} />
+        <Route path='client/delete/:id' element={<PrivateRoute><DeleteClients /></PrivateRoute>} />
+        <Route path='client/payment/:id' element={<PrivateRoute><ClientPayment /></PrivateRoute>} />
+        <Route path='client/advance/:id' element={<PrivateRoute><ClientAdvance /></PrivateRoute>} />
+        <Route path='client/details/:id' element={<PrivateRoute><ClientDetails /></PrivateRoute>} />
+        <Route path='client/edit-ledger/:id' element={<PrivateRoute><EditClientLedger /></PrivateRoute>} />
+        <Route path='client/delete-ledger/:id' element={<PrivateRoute><DeleteClientLedger /></PrivateRoute>} />
         {/* Add more routes as needed */}
         </Routes>
       </div>

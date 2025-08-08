@@ -16,7 +16,7 @@ const ShowStockOut = () => {
       .then((res) => {
         setStockoutItem(res.data);
         setLoading(false);
-        console.log(res.data)
+        // console.log(res.data)
       })
       .catch((error) => {
         console.log(error);
