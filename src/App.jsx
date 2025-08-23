@@ -38,6 +38,16 @@ import ClientDetails from './pages/ClientDetails.jsx'
 import EditClientLedger from './pages/EditClientLedger.jsx'
 import DeleteClientLedger from './pages/DeleteClientLedger.jsx'
 import CreateClient from './pages/CreateClient.jsx'
+import CreateExpenses from './pages/CreateExpenses.jsx'
+import ShowExpenses from './pages/ShowExpenses.jsx'
+import EditExpenses from './pages/EditExpenses.jsx'
+import ShowExpense from './pages/ShowExpense.jsx'
+import DeleteExpenses from './pages/DeleteExpenses.jsx'
+import CreateCashInfo from './pages/CreateCashInfo.jsx'
+import ShowCashInfos from './pages/ShowCashInfos.jsx'
+import EditCashInfo from './pages/EditCashInfo.jsx'
+import DeleteCashInfo from './pages/DeleteCashInfo.jsx'
+import CashInfoDetails from './pages/CashInfoDetails.jsx'
 import Footer from './components/Footer.jsx'
 
 export const UserContext = createContext();
@@ -88,6 +98,20 @@ const App = () => {
         <Route path='client/edit-ledger/:id' element={<PrivateRoute><EditClientLedger /></PrivateRoute>} />
         <Route path='client/delete-ledger/:id' element={<PrivateRoute><DeleteClientLedger /></PrivateRoute>} />
         <Route path='client/create' element={<PrivateRoute><CreateClient /></PrivateRoute>} />
+        <Route path='expenses/create' element={<PrivateRoute><CreateExpenses /></PrivateRoute>} />
+        <Route path='expenses/show' element={<PrivateRoute><ShowExpenses /></PrivateRoute>} />
+        <Route path='expenses/edit/:id' element={<PrivateRoute><EditExpenses /></PrivateRoute>} />
+        <Route path='expenses/details/:id' element={<PrivateRoute><ShowExpense /></PrivateRoute>} />
+        <Route path='expenses/delete/:id' element={<PrivateRoute><DeleteExpenses /></PrivateRoute>} />
+        <Route path='cashinfos/create' element={<PrivateRoute><CreateCashInfo /></PrivateRoute>} />
+        <Route path='cashinfos/show' element={<PrivateRoute><ShowCashInfos /></PrivateRoute>} />
+        <Route path='cashinfos/edit/:id' element={<PrivateRoute><EditCashInfo /></PrivateRoute>} />
+        <Route path='cashinfos/delete/:id' element={<PrivateRoute><DeleteCashInfo /></PrivateRoute>} />
+        <Route path='cashinfos/details/:id' element={<PrivateRoute><CashInfoDetails /></PrivateRoute>} />
+
+
+        
+        
         {/* Add more routes as needed */}
         </Routes>
       </div>

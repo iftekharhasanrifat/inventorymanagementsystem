@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-center md:text-left">
           {/* Brand Section */}
           <div>
-            <h2 className="text-2xl font-bold">Inventory Management System</h2>
+            <h2 className="text-2xl font-bold">Saber Traders Unit 2</h2>
             <p className="text-gray-400 mt-2">
               
             </p>

@@ -225,7 +225,7 @@ const Navbar = () => {
             <path d="M3 16V6a2 2 0 012-2h10a2 2 0 012 2v10m-6 4a2 2 0 100-4 2 2 0 000 4zm-6 0a2 2 0 100-4 2 2 0 000 4zm12-6h4l3 3v3h-3m-4 0h-2m2 0V8h4m-4 0l3 3" />
           </svg>
           <span className="text-2xl font-bold text-emerald-400">
-            Inventory Management
+            Saber Traders Unit 2
           </span>
         </Link>
 
@@ -242,6 +242,9 @@ const Navbar = () => {
                 <li><Link to="/items/create" className="block px-4 py-2 hover:bg-zinc-700">Item Setup</Link></li>
                 <li><Link to="/categories/create" className="block px-4 py-2 hover:bg-zinc-700">Category Setup</Link></li>
                 <li><Link to="/companies/create" className="block px-4 py-2 hover:bg-zinc-700">Company Setup</Link></li>
+                <li><Link to="/expenses/create" className="block px-4 py-2 hover:bg-zinc-700">Create Expenses</Link></li>
+                <li><Link to="/cashinfos/create" className="block px-4 py-2 hover:bg-zinc-700">Create Cash Info</Link></li>
+
               </ul>
             )}
           </li>
@@ -257,6 +260,8 @@ const Navbar = () => {
                 <li><Link to="/companies/show" className="block px-4 py-2 hover:bg-zinc-700">Company List</Link></li>
                 <li><Link to="/stockIn/show" className="block px-4 py-2 hover:bg-zinc-700">Stock In Log</Link></li>
                 <li><Link to="/stockout/show" className="block px-4 py-2 hover:bg-zinc-700">Stock Out Record</Link></li>
+                <li><Link to="/expenses/show" className="block px-4 py-2 hover:bg-zinc-700">Expenses</Link></li>
+                <li><Link to="/cashinfos/show" className="block px-4 py-2 hover:bg-zinc-700">Show Cash Info</Link></li>
               </ul>
             )}
           </li>
@@ -321,6 +326,8 @@ const Navbar = () => {
                 <Link to="/items/create" className="block py-1 hover:text-emerald-400">Item Setup</Link>
                 <Link to="/categories/create" className="block py-1 hover:text-emerald-400">Category Setup</Link>
                 <Link to="/companies/create" className="block py-1 hover:text-emerald-400">Company Setup</Link>
+                <Link to="/expenses/create" className="block py-1 hover:text-emerald-400">Create Expenses</Link>
+                <Link to="/cashinfos/create" className="block py-1 hover:text-emerald-400">Create Cash Info</Link>
               </div>
             )}
           </div>
@@ -334,6 +341,8 @@ const Navbar = () => {
                 <Link to="/companies/show" className="block py-1 hover:text-emerald-400">Company List</Link>
                 <Link to="/stockIn/show" className="block py-1 hover:text-emerald-400">Stock In Log</Link>
                 <Link to="/stockout/show" className="block py-1 hover:text-emerald-400">Stock Out Record</Link>
+                <Link to="/expenses/show" className="block py-1 hover:text-emerald-400">Expenses</Link>
+                <Link to="/cashinfos/show" className="block py-1 hover:text-emerald-400">Show Cash Info</Link>
               </div>
             )}
           </div>
